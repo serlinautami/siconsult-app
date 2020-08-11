@@ -1,0 +1,3 @@
+# SICONSULT
+
+ini apps skrispi

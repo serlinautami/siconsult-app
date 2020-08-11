@@ -1,0 +1,66 @@
+{
+  "users": {
+    "uid": {
+      "uid": "",
+      "email": "",
+      "fullName": "",
+      "gender": "",
+      "role": "",
+      "telphon": "",
+      "created_at": "",
+      "updated_at": ""
+    }
+  },
+  "user_masalah": {
+    "id": {
+      "id": "",
+      "masalah_id": "",
+      "user_id": "",
+      "chat_id": "",
+      "created_at": "",
+      "updated_at": ""
+    }
+  },
+  "category_masalah": {
+    "id": {
+      "id": "",
+      "name": ""
+    }
+  },
+  "item_masalah": {
+    "id": {
+      "id": "",
+      "category_id": "",
+      "name": "",
+      "description": "",
+      "rate": "",
+      "created_at": "",
+      "updated_at": ""
+    }
+  },
+  "chats": {
+    "id": {
+      "id": "",
+      "created_at": "",
+      "updated_at": ""
+    }
+  },
+  "user_chat": {
+    "id": {
+      "id": "",
+      "chat_id": "",
+      "sender_id": "",
+      "receiver_id": ""
+    }
+  },
+  "chat_content": {
+    "id": {
+      "id": "",
+      "user_chat_id": "",
+      "content": "",
+      "sender": "",
+      "created_at": "",
+      "updated_at": ""
+    }
+  }
+}

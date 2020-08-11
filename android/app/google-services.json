@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "287858581847",
+    "firebase_url": "https://consultation-ecc68.firebaseio.com",
+    "project_id": "consultation-ecc68",
+    "storage_bucket": "consultation-ecc68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287858581847:android:9bc23fe06510b79f085e12",
+        "android_client_info": {
+          "package_name": "com.siconsult"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287858581847-cu7qdddu4ud32lrg60a2c09qiemh48a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCn5mr1_rDTz4pFB4x7vyQR7Mv3Tcsp26U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287858581847-cu7qdddu4ud32lrg60a2c09qiemh48a7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

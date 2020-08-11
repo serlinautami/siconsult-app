@@ -1,0 +1,42 @@
+import { StyleSheet, Text, View, React, PropTypes } from '@libraries';
+import { colors, fonts } from '@utils';
+
+const MasalahItem = ({ label, value }) => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.label}>{label}</Text>
+      <Text style={styles.value}>{value}</Text>
+    </View>
+  );
+};
+
+MasalahItem.propTypes = {
+  label: PropTypes.string,
+  value: PropTypes.string
+};
+
+MasalahItem.defaultProps = {
+  label: '',
+  value: ''
+};
+
+export default MasalahItem;
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 16,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border
+  },
+  label: {
+    fontSize: 14,
+    fontFamily: fonts.primary.normal,
+    color: colors.text.secondary,
+    marginBottom: 6
+  },
+  value: {
+    fontSize: 14,
+    fontFamily: fonts.primary.normal,
+    color: colors.text.primary
+  }
+});

@@ -1,0 +1,55 @@
+{
+	"data": [
+		{
+			"id": 1,
+			"category": "Akademik",
+			"list": {
+				"tentang": {
+					"krs": {
+						"keterangan": "hdhj",
+						"id_detail": 1
+					},
+					"penggantian nilai": {
+						"keterangan": "kkllll",
+						"id_detail": 2
+					}
+				}
+			},
+			"rute": 0
+		},
+		{
+			"id": 2,
+			"category": "Keuangan",
+			"list": {
+				"tentang": {
+					"krs": {
+						"keterangan": "hdhj",
+						"id_detail": 1
+					},
+					"penggantian nilai": {
+						"keterangan": "kkllll",
+						"id_detail": 2
+					}
+				}
+			},
+			"rute": 0
+		},
+		{
+			"id": 3,
+			"category": "Bimbingan",
+			"list": {
+				"tentang": {
+					"krs": {
+						"keterangan": "hdhj",
+						"id_detail": 1
+					},
+					"penggantian nilai": {
+						"keterangan": "kkllll",
+						"id_detail": 2
+					}
+				}
+			},
+			"rute": 0
+		}
+	]
+}
