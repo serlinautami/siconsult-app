@@ -22,7 +22,7 @@ const DetailLaporan = ({ navigation, route }) => {
   const onShare = async () => {
     try {
       const result = await Share.share({
-        message: `[siconsult-app] Laporan:${detail.reportName}, Tipe Laporan: ${getReportType(detail.type)}, url: https://report-web.vercel.app/laporan?type=${type}&id=${report.reportKey}`
+        message: `[siconsult-app] Laporan:${detail.reportName}, Tipe Laporan: ${getReportType(detail.type)}, url: https://siconsult-report.vercel.app/laporan?type=${type}&id=${report.reportKey}`
       });
       if (result.action === Share.sharedAction) {
         if (result.activityType) {
