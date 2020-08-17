@@ -67,10 +67,10 @@ const Register = ({ navigation }) => {
           />
           <Gap height={24} />
           <Input
-            label="Telphon"
+            label="Telepon"
             value={form.telphon}
             onChangeText={value => setForm('telphon', value)}
-            placeholder="Isi nomor telphon"
+            placeholder="Isi nomor telepon"
             keyboardType={'phone-pad'}
             maxLength={12}
           />

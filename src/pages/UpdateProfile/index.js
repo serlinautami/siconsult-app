@@ -160,10 +160,10 @@ const UpdateProfile = ({ navigation }) => {
           />
           <Gap height={24} />
           <Input
-            label="Telphon"
+            label="Telepon"
             value={`${profile.telphon}`}
             onChangeText={value => changeText('telphon', value)}
-            placeholder="Isi nomor telphon"
+            placeholder="Isi nomor telepon"
             keyboardType={'phone-pad'}
             maxLength={12}
           />
