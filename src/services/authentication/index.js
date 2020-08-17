@@ -11,7 +11,33 @@ import { storeData, showError, removeData, showSuccess, getData } from '@utils';
  */
 export async function signUp(payload = {}) {
   try {
+    const { fullName, email, password, idNumber, gender, telphon } = payload;
     showLoading(true);
+
+    if (!fullName) {
+      throw new Error('Nama tidak boleh kosong!');
+    }
+
+    if (!idNumber) {
+      throw new Error('Nomor ID atau NPM tidak boleh kosong!');
+    }
+
+    if (!gender) {
+      throw new Error('Gender harus dipilih!');
+    }
+
+    if (!telphon) {
+      throw new Error('Nomor Telepon tidak boleh kosong!');
+    }
+
+    if (!email) {
+      throw new Error('Email tidak boleh kosong!');
+    }
+
+    if (!password) {
+      throw new Error('Password tidak boleh kosong!');
+    }
+
     const response = await auth().createUserWithEmailAndPassword(
       payload.email,
       payload.password
@@ -35,7 +61,22 @@ export async function signUp(payload = {}) {
     return data;
   } catch (err) {
     showLoading(false);
-    showError(err.message);
+    if (err && err.code) {
+      if (err.code === 'auth/invalid-email') {
+        showError('Format email salah! silahkan cek kembali');
+      }
+      if (err.code === 'auth/weak-password') {
+        showError('Password minimal harus memiliki 6 karakter');
+      }
+
+      if (err.code === 'auth/email-already-in-use') {
+        showError(
+          'Akun dengan email ini sudah terdaftar sebelumnya, silahkan gunakan email lain!'
+        );
+      }
+    } else {
+      showError(err.message);
+    }
     throw err;
   }
 }
@@ -74,6 +115,15 @@ export const getUserByUid = async (uid, params = {}) => {
  */
 export async function signIn(payload = {}) {
   try {
+    const { email, password } = payload;
+
+    if (!email) {
+      throw new Error('Email tidak boleh kosong!');
+    }
+
+    if (!password) {
+      throw new Error('Password tidak boleh kosong!');
+    }
     showLoading(true);
     const response = await auth().signInWithEmailAndPassword(
       payload.email,
@@ -97,8 +147,20 @@ export async function signIn(payload = {}) {
     showLoading(false);
     return data;
   } catch (err) {
+    console.log(JSON.stringify(err));
     showLoading(false);
-    showError(err.message);
+    if (err.code) {
+      if (err.code === 'auth/wrong-password') {
+        showError('Password Salah, mohon periksa kembali!');
+      }
+      if (err.code === 'auth/user-not-found') {
+        showError(
+          'Akun tidak ditemukan, silahkan melakukan pendaftaran terlebih dahulu!'
+        );
+      }
+    } else {
+      showError(err.message);
+    }
     throw err;
   }
 }
@@ -132,6 +194,20 @@ export const signOut = async () => {
  */
 export const updateProfile = async (payload = {}) => {
   try {
+    const { fullName, gender, telphon } = payload;
+
+    if (!fullName) {
+      throw new Error('Nama tidak boleh kosong!');
+    }
+
+    if (!gender) {
+      throw new Error('Gender harus dipilih!');
+    }
+
+    if (!telphon) {
+      throw new Error('Nomor Telepon tidak boleh kosong!');
+    }
+
     showLoading(true);
     await database().ref(`users/${payload.uid}/`).update(payload);
     await storeData('user', payload);

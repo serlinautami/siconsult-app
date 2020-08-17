@@ -3,34 +3,49 @@ import {
   StyleSheet,
   View,
   React,
-  useEffect,
-  useState,
-  moment,
   ScrollView,
-  Share
+  Linking
 } from '@libraries';
 import { Header, ItemComponent, Button } from '@components';
-import { colors, routeConstant } from '@utils';
-import { getReportById } from '@services';
-import { getReportType } from '@utils';
+import { colors, showError } from '@utils';
 import { currentConfig } from '@configs';
 
-const AboutApp = ({ navigation, route }) => {
+const AboutApp = ({ navigation }) => {
+
+  const openLink = (url) =>  {
+    Linking.canOpenURL(url).then(() => {
+      Linking.openURL(url);
+    }).catch(err => {
+      console.log('err', err);
+      showError('Tidak bisa membuka url');
+    });
+  };
 
   return (
     <View style={styles.page}>
       <Header title="Tentang Aplikasi" onPress={() => navigation.goBack()} />
-        <ScrollView>
+      <View style={styles.scrollWrapper}>
+      <ScrollView>
           <ItemComponent
             label="Nama Aplikasi"
-            value={'Si Consult'}
+            value={currentConfig.appName}
+          />
+          <ItemComponent
+            label="Deskripsi Aplikasi"
+            value={currentConfig.appDescription}
           />
           <ItemComponent
             label="Versi"
             value={currentConfig.version}
           />
-          <ItemComponent label="Author" value="Serlina Utami" />
+          <ItemComponent label="Author" value={currentConfig.author} />
+          <ItemComponent canPressed on label="Kebijakan Privasi" value="Sentuh untuk melihat kebijakan privasi" onPress={() => openLink(currentConfig.privacyPolicy)} />
         </ScrollView>
+      </View>
+
+        <View style={styles.buttonHolder}>
+        <Button onPress={() => openLink(currentConfig.playstore)} title="Beri Rating Aplikasi" />
+      </View>
     </View>
   );
 };

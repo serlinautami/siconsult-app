@@ -23,6 +23,19 @@ const UpdateProfile = ({ navigation }) => {
     email: ''
   });
 
+  const [itemGender] = useState([
+    {
+      id: 1,
+      label: 'Pria',
+      value: 'pria'
+    },
+    {
+      id: 2,
+      label: 'Wanita',
+      value: 'wanita'
+    }
+  ]);
+
   const [password, setPassword] = useState('');
   const [photo, setPhoto] = useState(ILNullPhoto);
   const [photoForDB, setPhotoForDB] = useState('');
@@ -155,8 +168,9 @@ const UpdateProfile = ({ navigation }) => {
           <Input
             label="Gender"
             value={profile.gender}
-            onChangeText={value => changeText('gender', value)}
-            disable
+            onValueChange={value => changeText('gender', value)}
+            select
+            selectItem={itemGender}
           />
           <Gap height={24} />
           <Input
@@ -168,7 +182,7 @@ const UpdateProfile = ({ navigation }) => {
             maxLength={12}
           />
           <Gap height={24} />
-          <Input label="Email" value={profile.email} />
+          <Input label="Email" value={profile.email} disable />
           <Gap height={24} />
           <Input
             label="Password"

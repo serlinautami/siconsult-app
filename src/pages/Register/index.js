@@ -8,13 +8,18 @@ const Register = ({ navigation }) => {
     fullName: '',
     role: 'Mahasiswa',
     idNumber: '',
-    gender: 'pria',
+    gender: '',
     telphon: '',
     email: '',
     password: ''
   });
 
   const [itemGender] = useState([
+    {
+      id: 0,
+      label: 'Pilih Gender',
+      value: ''
+    },
     {
       id: 1,
       label: 'Pria',
