@@ -111,19 +111,16 @@ const UpdateProfile = ({ navigation }) => {
   };
 
   const getImage = () => {
-    ImagePicker.launchImageLibrary(
-      { quality: 0.5, maxWidth: 200, maxHeight: 200 },
-      response => {
-        if (response.didCancel || response.error) {
-          showError('oops, sepertinya anda tidak memilih foto nya?');
-        } else {
-          const source = { uri: response.uri };
-
-          setPhotoForDB(`data:${response.type};base64, ${response.data}`);
-          setPhoto(source);
-        }
+    const imageOption = { quality: 0.5, maxWidth: 200, maxHeight: 200 };
+    ImagePicker.launchImageLibrary(imageOption, response => {
+      if (response.didCancel || response.error) {
+        showError('oops, sepertinya anda tidak memilih foto nya?');
+      } else {
+        const source = { uri: response.uri };
+        setPhotoForDB(`data:${response.type};base64, ${response.data}`);
+        setPhoto(source);
       }
-    );
+    });
   };
 
   return (

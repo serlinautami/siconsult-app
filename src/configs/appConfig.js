@@ -1,6 +1,6 @@
 const activeConfig = {
   environment: 'production',
-  version: '1.0.1',
+  version: '1.0.3',
   developmentStatus: '',
   appName: 'SI Consult',
   appDescription:
