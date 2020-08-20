@@ -15,8 +15,8 @@ const AboutApp = ({ navigation }) => {
   const openLink = (url) =>  {
     Linking.canOpenURL(url).then(() => {
       Linking.openURL(url);
-    }).catch(err => {
-      console.log('err', err);
+    }).catch(() => {
+      // console.log('err', err);
       showError('Tidak bisa membuka url');
     });
   };

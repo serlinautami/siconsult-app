@@ -62,17 +62,26 @@ export async function signUp(payload = {}) {
   } catch (err) {
     showLoading(false);
     if (err && err.code) {
-      if (err.code === 'auth/invalid-email') {
-        showError('Format email salah! silahkan cek kembali');
-      }
-      if (err.code === 'auth/weak-password') {
-        showError('Password minimal harus memiliki 6 karakter');
-      }
-
-      if (err.code === 'auth/email-already-in-use') {
-        showError(
-          'Akun dengan email ini sudah terdaftar sebelumnya, silahkan gunakan email lain!'
-        );
+      switch (err.code) {
+        case 'auth/email-already-in-use':
+          showError(
+            'Akun dengan email ini sudah terdaftar sebelumnya, silahkan gunakan email lain!'
+          );
+          break;
+        case 'auth/weak-password':
+          showError('Password minimal harus memiliki 6 karakter');
+          break;
+        case 'auth/invalid-email':
+          showError('Format email salah! silahkan cek kembali');
+          break;
+        case 'auth/too-many-requests':
+          showError(
+            'Terlalu banyak kesalahan saat Sign In, silahkan coba lagi nanti'
+          );
+          break;
+        default:
+          showError(err.message);
+          break;
       }
     } else {
       showError(err.message);
@@ -102,7 +111,6 @@ export const getUserByUid = async (uid, params = {}) => {
 
     throw null;
   } catch (err) {
-    console.log('err', err);
     throw err;
   }
 };
@@ -147,16 +155,25 @@ export async function signIn(payload = {}) {
     showLoading(false);
     return data;
   } catch (err) {
-    console.log(JSON.stringify(err));
     showLoading(false);
-    if (err.code) {
-      if (err.code === 'auth/wrong-password') {
-        showError('Password Salah, mohon periksa kembali!');
-      }
-      if (err.code === 'auth/user-not-found') {
-        showError(
-          'Akun tidak ditemukan, silahkan melakukan pendaftaran terlebih dahulu!'
-        );
+    if (err && err.code) {
+      switch (err.code) {
+        case 'auth/wrong-password':
+          showError('Password Salah, mohon periksa kembali!');
+          break;
+        case 'auth/user-not-found':
+          showError(
+            'Akun tidak ditemukan, silahkan melakukan pendaftaran terlebih dahulu!'
+          );
+          break;
+        case 'auth/too-many-requests':
+          showError(
+            'Terlalu banyak kesalahan saat SignIn, silahkan coba lagi nanti!'
+          );
+          break;
+        default:
+          showError(err.message);
+          break;
       }
     } else {
       showError(err.message);

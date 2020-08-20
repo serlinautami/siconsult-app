@@ -27,11 +27,9 @@ export const sendNotification = async (
       body: JSON.stringify(requestPayload)
     });
 
-    console.log('sendNotification response', response);
-
     return response;
   } catch (err) {
-    console.log('sendNotification', err);
+    throw err;
   }
 };
 
@@ -182,9 +180,6 @@ export const chatSend = function ({
     .then(() => {
       database().ref(urlMessageSender).set(dataHistoryChatForSender);
       database().ref(urlMessageReceiver).set(dataHistoryChatForReceiver);
-
-      console.log('receiver', receiver.uid);
-      console.log('sender', sender.uid);
 
       if (sender && sender.role && sender.role.toLowerCase() === 'kajur') {
         sendNotification(receiver.fcmtoken, {

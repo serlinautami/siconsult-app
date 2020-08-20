@@ -475,7 +475,6 @@ export const createReport = async ({ userId, categoryId, masalahId }) => {
       await database().ref(`reports/${YEARLY}/${year}`).set(yearlyPayload);
     }
   } catch (err) {
-    console.log('err', err);
     throw err;
   }
 };
