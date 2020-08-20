@@ -234,6 +234,7 @@ export const sendPasswordResetEmail = async function (email) {
     showSuccess('Sukses, cek email untuk reset password!');
     return true;
   } catch (err) {
+    showLoading(false);
     showError(err.message);
     throw err;
   }
