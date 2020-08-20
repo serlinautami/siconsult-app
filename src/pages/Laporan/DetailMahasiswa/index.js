@@ -27,7 +27,7 @@ const DetailMahasiswa = ({ navigation, route }) => {
           chatId: message.id
         });
       })
-      .catch(err => console.log(err));
+      .catch(() => {});
   };
 
   useEffect(() => {

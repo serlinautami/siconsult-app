@@ -37,9 +37,7 @@ const Register = ({ navigation }) => {
       .then(data => {
         navigation.navigate(routeConstant.UPLOADPHOTO, data);
       })
-      .catch(err => {
-        console.log(err);
-      });
+      .catch(() => {});
   };
 
   return (

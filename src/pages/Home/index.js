@@ -42,7 +42,7 @@ const Home = ({ navigation }) => {
       .then(data => {
         setMasalahPopuler(data);
       })
-      .catch(err => console.log(err));
+      .catch(() => {});
   };
 
   const getUserData = () => {

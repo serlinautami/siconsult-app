@@ -24,9 +24,7 @@ const Login = ({ navigation }) => {
           ]
         });
       })
-      .catch(err => {
-        console.log(err);
-      });
+      .catch(() => {});
   };
 
   return (
