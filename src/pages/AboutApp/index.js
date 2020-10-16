@@ -38,7 +38,12 @@ const AboutApp = ({ navigation }) => {
             label="Versi"
             value={currentConfig.version}
           />
-          <ItemComponent label="Author" value={currentConfig.author} />
+          <ItemComponent
+            label="Kampus"
+            value={currentConfig.campus}
+          />
+          <ItemComponent canPressed onPress={() => openLink(currentConfig.developer1.wa)} label="Developer 1" value={currentConfig.developer1.name} />
+          <ItemComponent canPressed onPress={() => openLink(currentConfig.developer2.wa)} label="Developer 2" value={currentConfig.developer2.name} />
           <ItemComponent canPressed on label="Kebijakan Privasi" value="Sentuh untuk melihat kebijakan privasi" onPress={() => openLink(currentConfig.privacyPolicy)} />
         </ScrollView>
       </View>

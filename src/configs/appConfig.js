@@ -1,13 +1,24 @@
 const activeConfig = {
   environment: 'production',
-  version: '1.0.5',
+  version: '1.0.6',
   developmentStatus: '',
   appName: 'SI Consult',
   appDescription:
     'Aplikasi Konsultasi Mahasiswa dengan Ketua Jurusan (Kajur) secara real-time',
   privacyPolicy: 'https://siconsult-report.vercel.app/kebijakan-privasi',
   playstore: 'https://play.google.com/store/apps/details?id=com.siconsult',
-  author: 'Serlina Utami'
+  author: 'Serlina Utami',
+  campus: 'STMIK Insan Pembangunan',
+  developer1: {
+    name: 'IP Adiyanto',
+    number: '+6285213677334',
+    wa: 'https://wa.me/+6285213677334'
+  },
+  developer2: {
+    name: 'IP Bayu',
+    number: '+6287878140460',
+    wa: 'https://wa.me/+6287878140460'
+  }
 };
 
 const appEnvironment = {
