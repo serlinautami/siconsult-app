@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "287858581847",
-    "firebase_url": "https://consultation-ecc68.firebaseio.com",
-    "project_id": "consultation-ecc68",
-    "storage_bucket": "consultation-ecc68.appspot.com"
+    "project_number": "428698717024",
+    "firebase_url": "https://si-consult-stmik-pembangunan.firebaseio.com",
+    "project_id": "si-consult-stmik-pembangunan",
+    "storage_bucket": "si-consult-stmik-pembangunan.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:287858581847:android:9bc23fe06510b79f085e12",
+        "mobilesdk_app_id": "1:428698717024:android:51ebd7528cc2a0820bec05",
         "android_client_info": {
           "package_name": "com.siconsult"
         }
       },
       "oauth_client": [
         {
-          "client_id": "287858581847-cu7qdddu4ud32lrg60a2c09qiemh48a7.apps.googleusercontent.com",
+          "client_id": "428698717024-u9f113olnm65lh06e1kh2qt5dl05hv6l.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCn5mr1_rDTz4pFB4x7vyQR7Mv3Tcsp26U"
+          "current_key": "AIzaSyAAjqBZviqD_0g2s-VmoWlDEqJh3lGKvjw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "287858581847-cu7qdddu4ud32lrg60a2c09qiemh48a7.apps.googleusercontent.com",
+              "client_id": "428698717024-u9f113olnm65lh06e1kh2qt5dl05hv6l.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

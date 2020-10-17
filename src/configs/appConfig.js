@@ -1,6 +1,6 @@
 const activeConfig = {
   environment: 'production',
-  version: '1.0.6',
+  version: '1.0.7',
   developmentStatus: '',
   appName: 'SI Consult',
   appDescription:
@@ -25,31 +25,31 @@ const appEnvironment = {
   development: {
     firebase: {
       config: {
-        apiKey: 'AIzaSyAM7aifeThs7ynf1Z_1R85ThfSzxHWzZGg',
-        authDomain: 'consultation-ecc68.firebaseapp.com',
-        databaseURL: 'https://consultation-ecc68.firebaseio.com',
-        projectId: 'consultation-ecc68',
-        storageBucket: 'consultation-ecc68.appspot.com',
-        messagingSenderId: '287858581847',
-        appId: '1:287858581847:web:3af7c569e059bfff085e12'
+        apiKey: 'AIzaSyCeLTe2h1P5SI7vAA2w-R-2rOv3ENsR5Ds',
+        authDomain: 'si-consult-stmik-pembangunan.firebaseapp.com',
+        databaseURL: 'https://si-consult-stmik-pembangunan.firebaseio.com',
+        projectId: 'si-consult-stmik-pembangunan',
+        storageBucket: 'si-consult-stmik-pembangunan.appspot.com',
+        messagingSenderId: '428698717024',
+        appId: '1:428698717024:web:dfa3919e2549fdad0bec05'
       },
       fcmkey:
-        'AAAAQwW1YVc:APA91bESHwS2XVeg4esvuOq-9T65ZaZ8rW0Mujd4sairgzV-9Yp1t3HhclQ4K9g6OOUwhw8G5YHSFPn77R38oT4UJpmCAXzx_TDae9tTFiPKugNUsirqu9FByNM-DX3YUcwBgnCwJaWY'
+        'AAAAY9BvS2A:APA91bEgBVXxgKuH4YZH6tGX1780pqG02b_STYvtSkftOSxA-plfBGglBW_ceGhX3EXByy7KvgUgVj2eJY2HCOlfRkpE8izoEz3rGbtx4r49vQZ2KnbbGE-jYkn7esqi0M-gT7nu6fzG'
     }
   },
   production: {
     firebase: {
       config: {
-        apiKey: 'AIzaSyAM7aifeThs7ynf1Z_1R85ThfSzxHWzZGg',
-        authDomain: 'consultation-ecc68.firebaseapp.com',
-        databaseURL: 'https://consultation-ecc68.firebaseio.com',
-        projectId: 'consultation-ecc68',
-        storageBucket: 'consultation-ecc68.appspot.com',
-        messagingSenderId: '287858581847',
-        appId: '1:287858581847:web:3af7c569e059bfff085e12'
+        apiKey: 'AIzaSyCeLTe2h1P5SI7vAA2w-R-2rOv3ENsR5Ds',
+        authDomain: 'si-consult-stmik-pembangunan.firebaseapp.com',
+        databaseURL: 'https://si-consult-stmik-pembangunan.firebaseio.com',
+        projectId: 'si-consult-stmik-pembangunan',
+        storageBucket: 'si-consult-stmik-pembangunan.appspot.com',
+        messagingSenderId: '428698717024',
+        appId: '1:428698717024:web:dfa3919e2549fdad0bec05'
       },
       fcmkey:
-        'AAAAQwW1YVc:APA91bESHwS2XVeg4esvuOq-9T65ZaZ8rW0Mujd4sairgzV-9Yp1t3HhclQ4K9g6OOUwhw8G5YHSFPn77R38oT4UJpmCAXzx_TDae9tTFiPKugNUsirqu9FByNM-DX3YUcwBgnCwJaWY'
+        'AAAAY9BvS2A:APA91bEgBVXxgKuH4YZH6tGX1780pqG02b_STYvtSkftOSxA-plfBGglBW_ceGhX3EXByy7KvgUgVj2eJY2HCOlfRkpE8izoEz3rGbtx4r49vQZ2KnbbGE-jYkn7esqi0M-gT7nu6fzG'
     }
   }
 };
