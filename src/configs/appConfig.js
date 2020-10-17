@@ -3,9 +3,10 @@ const activeConfig = {
   version: '1.0.7',
   developmentStatus: '',
   appName: 'SI Consult',
+  reportUrl: 'https://siconsult-report.vercel.app/laporan',
   appDescription:
     'Aplikasi Konsultasi Mahasiswa dengan Ketua Jurusan (Kajur) secara real-time',
-  privacyPolicy: 'https://siconsult-report.vercel.app/kebijakan-privasi',
+  privacyPolicy: 'https://siconsult-web.vercel.app/kebijakan-privasi',
   playstore: 'https://play.google.com/store/apps/details?id=com.siconsult',
   author: 'Serlina Utami',
   campus: 'STMIK Insan Pembangunan',

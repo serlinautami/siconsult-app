@@ -13,6 +13,7 @@ import { Header, ItemComponent, Button } from '@components';
 import { colors, routeConstant } from '@utils';
 import { getReportById } from '@services';
 import { getReportType } from '@utils';
+import { currentConfig } from '@configs';
 
 const DetailLaporan = ({ navigation, route }) => {
   const { report, type } = route.params;
@@ -22,7 +23,7 @@ const DetailLaporan = ({ navigation, route }) => {
   const onShare = async () => {
     try {
       const result = await Share.share({
-        message: `[siconsult-app] Laporan:${detail.reportName}, Tipe Laporan: ${getReportType(detail.type)}, url: https://siconsult-report.vercel.app/laporan?type=${type}&id=${report.reportKey}`
+        message: `[siconsult-app] Laporan:${detail.reportName}, Tipe Laporan: ${getReportType(detail.type)}, url: ${currentConfig.reportUrl}?type=${type}&id=${report.reportKey}`
       });
       if (result.action === Share.sharedAction) {
         if (result.activityType) {
