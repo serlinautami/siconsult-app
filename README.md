@@ -1,5 +1,5 @@
 # SI Consult 
-Aplikasi Konsultasi Chatting secara realtime untuk Mahasiswa dan Ketua Jurusan (Kajur) di STMIK Insan Pemangunan
+Aplikasi Konsultasi Chatting secara realtime untuk Mahasiswa dan Ketua Jurusan (Kajur) di STMIK Insan Pembangunan
 
 ![enter image description here](https://1.bp.blogspot.com/-xwl7oRpJB44/X4qWToYMJPI/AAAAAAAAHgU/p1TakGWit00CNVC06xL20YMtdwmrMGcWQCLcBGAsYHQ/s0/Screen+Shot+2020-10-17+at+13.57.36.png)
 
