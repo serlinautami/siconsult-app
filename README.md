@@ -4,10 +4,10 @@ Aplikasi Konsultasi Chatting secara realtime untuk Mahasiswa dan Ketua Jurusan (
 ![enter image description here](https://1.bp.blogspot.com/-xwl7oRpJB44/X4qWToYMJPI/AAAAAAAAHgU/p1TakGWit00CNVC06xL20YMtdwmrMGcWQCLcBGAsYHQ/s0/Screen+Shot+2020-10-17+at+13.57.36.png)
 
 ### Informasi
-Author:Serlina Utami
-Platform: Android
-Teknologi: Javascript, React, React Native, Firebase, Node JS
-Demo: https://play.google.com/store/apps/details?id=com.siconsult
+- Author:Serlina Utami
+- Platform: Android
+- Teknologi: Javascript, React, React Native, Firebase, Node JS
+- Demo: https://play.google.com/store/apps/details?id=com.siconsult
 
 ### Cara menjalankan project
 Karena Dibuat dengan React Native, usahakan perlajari dahulu basic-basic React Native di situs officialnya berikut https://reactnative.dev/ atau bisa juga dari channel-channel programming di youtube seperti channel Prawito Hudoro. Untuk installasinya pakai React Native CLI https://reactnative.dev/docs/environment-setup.
